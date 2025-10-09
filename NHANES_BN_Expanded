@@ -1,0 +1,70 @@
+// NHANES_BN_Expanded
+digraph {
+	node [fontsize=10 shape=box]
+	edge [arrowhead=vee splines=line]
+	RIDAGEYR [label="Age (RIDAGEYR)"]
+	RIAGENDR [label="Sex (RIAGENDR)"]
+	RIDRETH3 [label="Race/Ethnicity (RIDRETH3)"]
+	DMDEDUC2 [label="Education (DMDEDUC2)"]
+	INDFMPIR [label="Income-to-Poverty (INDFMPIR)"]
+	SMQ020 [label="Smoked ≥100 Cigs (SMQ020)"]
+	SMQ040 [label="Current Smoker (SMQ040)"]
+	ALQ111 [label="Ever Alcohol (ALQ111)"]
+	ALQ130 [label="Avg Drinks/Day 12mo (ALQ130)"]
+	PAQ605 [label="Vigorous Work (PAQ605)"]
+	PAQ620 [label="Moderate Work (PAQ620)"]
+	BMXBMI [label="BMI (BMXBMI)"]
+	BMXWAIST [label="Waist Circumference (BMXWAIST)"]
+	SBP [label="Systolic BP (SBP)"]
+	LBXIN [label="Insulin (LBXIN)"]
+	LBXGLU [label="Fasting Glucose (LBXGLU)"]
+	LBXGH [label="HbA1c (LBXGH)"]
+	BPQ020 [label="Hypertension Dx (BPQ020)"]
+	BPQ050A [label="BP Meds (BPQ050A)"]
+	DIQ010 [label="Diabetes Dx (DIQ010)"]
+	RIDAGEYR -> SMQ020
+	RIDAGEYR -> ALQ111
+	RIDAGEYR -> PAQ620
+	RIAGENDR -> SMQ020
+	RIAGENDR -> ALQ111
+	RIDRETH3 -> ALQ111
+	INDFMPIR -> ALQ111
+	INDFMPIR -> PAQ620
+	DMDEDUC2 -> SMQ020
+	DMDEDUC2 -> PAQ620
+	RIDAGEYR -> BMXBMI
+	RIDAGEYR -> SBP
+	RIDAGEYR -> LBXGLU
+	RIDAGEYR -> LBXGH
+	RIAGENDR -> BMXBMI
+	RIAGENDR -> SBP
+	RIDRETH3 -> BMXBMI
+	RIDRETH3 -> LBXGH
+	PAQ620 -> BMXBMI
+	PAQ605 -> BMXBMI
+	ALQ111 -> BMXBMI
+	SMQ020 -> BMXBMI
+	PAQ620 -> BMXWAIST
+	PAQ605 -> BMXWAIST
+	SMQ020 -> SBP
+	SMQ040 -> SBP
+	ALQ130 -> SBP
+	SMQ020 -> LBXGLU
+	ALQ111 -> LBXGLU
+	PAQ620 -> LBXGLU
+	BMXBMI -> BMXWAIST
+	BMXBMI -> LBXIN
+	BMXBMI -> LBXGLU
+	BMXBMI -> SBP
+	LBXIN -> LBXGLU
+	LBXGLU -> LBXGH
+	LBXIN -> LBXGH
+	LBXGLU -> SBP
+	LBXGH -> SBP
+	SBP -> BPQ020
+	LBXGH -> DIQ010
+	LBXGLU -> DIQ010
+	RIDAGEYR -> BPQ020
+	RIDAGEYR -> DIQ010
+	BPQ020 -> BPQ050A
+}
