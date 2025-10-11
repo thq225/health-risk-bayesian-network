@@ -84,7 +84,7 @@ ipython_config.py
 # Plot outputs and reports
 # -------------------------------
 *.png
-*.jpg
+# *.jpg
 *.jpeg
 *.svg
 # *.pdf
